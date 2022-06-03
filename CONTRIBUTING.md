@@ -17,9 +17,9 @@ Pull requests are the best way to propose changes to the codebase.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request.
 
-## Report bugs using Github's [issues](https://github.com/TuX-sudo/joke-bot/issues)
+## Report bugs using Github's [issues](https://github.com/AntonVanAssche/joke-bot/issues)
 
-If you come across a bug, feel free to report it by opening a new [issue](https://github.com/TuX-sudo/joke-bot/issues).
+If you come across a bug, feel free to report it by opening a new [issue](https://github.com/AntonVanAssche/joke-bot/issues).
 
 ## Write bug reports with detail, background, and sample code
 
