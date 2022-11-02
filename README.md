@@ -1,31 +1,31 @@
 <div align="center">
-   <h1>
-      Joke-bot
-   </h1>
-   <p align="center">
-   Simple Discord bot to tell random jokes.
-      <br/>
-      <strong>·</strong>
-      <a href="https://github.com/AntonVanAssche/joke-bot/issues">Report Bug</a>
-      <strong>·</strong>
-      <a href="https://github.com/AntonVanAssche/joke-bot/issues">Request Feature</a>
-   </p>
-   <p align="center">
-      <a href="https://github.com/AntonVanAssche/joke-bot/graphs/contributors">
-         <img src="https://img.shields.io/github/contributors/AntonVanAssche/joke-bot.svg?style=for-the-badge">
-      </a>
-      <a href="https://github.com/AntonVanAssche/joke-bot/network/members">
-         <img src="https://img.shields.io/github/forks/AntonVanAssche/joke-bot.svg?style=for-the-badge">
-      </a>
-      <a href="https://github.com/AntonVanAssche/AntonVanAssche/joke-bot">
-         <img src="https://img.shields.io/github/stars/AntonVanAssche/joke-bot.svg?style=for-the-badge">
-      </a>
-      <a href="https://github.com/AntonVanAssche/AntonVanAssche/joke-bot">
-         <img src="https://img.shields.io/github/issues/AntonVanAssche/joke-bot.svg?style=for-the-badge">
-      </a>
-      <a href="https://github.com/AntonVanAssche/joke-bot/blob/master/LICENSE.md">
-         <img src="https://img.shields.io/github/license/AntonVanAssche/joke-bot.svg?style=for-the-badge">
-      </a>
+    <h1>
+        Joke-bot
+    </h1>
+    <p align="center">
+    Simple Discord bot to tell random jokes.
+        <br/>
+        <strong>·</strong>
+        <a href="https://github.com/AntonVanAssche/joke-bot/issues">Report Bug</a>
+        <strong>·</strong>
+        <a href="https://github.com/AntonVanAssche/joke-bot/issues">Request Feature</a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/AntonVanAssche/joke-bot/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/AntonVanAssche/joke-bot.svg?style=for-the-badge">
+        </a>
+        <a href="https://github.com/AntonVanAssche/joke-bot/network/members">
+            <img src="https://img.shields.io/github/forks/AntonVanAssche/joke-bot.svg?style=for-the-badge">
+        </a>
+        <a href="https://github.com/AntonVanAssche/AntonVanAssche/joke-bot">
+            <img src="https://img.shields.io/github/stars/AntonVanAssche/joke-bot.svg?style=for-the-badge">
+        </a>
+        <a href="https://github.com/AntonVanAssche/AntonVanAssche/joke-bot">
+            <img src="https://img.shields.io/github/issues/AntonVanAssche/joke-bot.svg?style=for-the-badge">
+        </a>
+        <a href="https://github.com/AntonVanAssche/joke-bot/blob/master/LICENSE.md">
+            <img src="https://img.shields.io/github/license/AntonVanAssche/joke-bot.svg?style=for-the-badge">
+        </a>
 </div>
 
 ## How it works
@@ -44,7 +44,7 @@ Underneath you will find a list of commands that the bot can use.
 -  `!stats`: Shows the bot's stats.
 -  `!joke`: Get a random joke.
 -  `!category <category>`: Get a random joke from a specific category.
-   -  categories: `programming`, `misc`, `dark`, `pun`, `spooky`, `christmas`
+    -  categories: `programming`, `misc`, `dark`, `pun`, `spooky`, `christmas`
 -  `!meme`: Get a random meme from Reddit.
 
 Do you have a recommendation for a new command? Feel free to [submit it here](https://github.com/AntonVanAssche/joke-bot/issues/new).
@@ -65,8 +65,8 @@ If you wish to change the prefix of the bot, you can do so in the `config.json` 
 
 ```json
 {
-   "prefix": "---YOUR-BOT-PREFIX---",
-   "token": "---PLACE-YOUR-TOKEN-HERE---"
+    "prefix": "---YOUR-BOT-PREFIX---",
+    "token": "---PLACE-YOUR-TOKEN-HERE---"
 }
 ```
 

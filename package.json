@@ -1,14 +1,14 @@
 {
-   "name": "joke-bot",
-   "version": "1.0.0",
-   "description": "Simple Discord bot that will make you laugh",
-   "main": "index.js",
-   "dependencies": {
-      "axios": "^0.27.2",
-      "discord.js": "^12.5.3",
-      "os": "^0.1.2"
-   },
-   "keywords": [],
-   "author": "Anton Van Assche",
-   "license": "MIT"
+    "name": "joke-bot",
+    "version": "1.0.0",
+    "description": "Simple Discord bot that will make you laugh",
+    "main": "index.js",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "discord.js": "^12.5.3",
+        "os": "^0.1.2"
+    },
+    "keywords": [],
+    "author": "Anton Van Assche",
+    "license": "MIT"
 }
