@@ -9,9 +9,21 @@ module.exports = {
     run: async (client, message, args) => {
         const FetchMeme = async (category) => {
             try {
+                // Select a random subreddit from the array.
+                var subs = [
+                    "dankmemes",
+                    "memes",
+                    "AdviceAnimals",
+                    "MemeEconomy",
+                    "me_irl",
+                    "ComedyCemetery",
+                    "terriblefacebookmemes"
+                ];
+                const randomsub = subs[Math.floor(Math.random() * subs.length)];
+
                 // Fetch a random meme from the API.
                 const response = await axios.get(
-                    "https://reddit-meme-api.herokuapp.com"
+                    `http://127.0.0.1:5000/${randomsub}`
                 );
 
                 // Check if the API successfully returned a joke.

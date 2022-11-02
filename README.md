@@ -33,7 +33,9 @@
 The bot makes use of the [JokeAPI](https://jokeapi.dev/) to get the random jokes. This is a REST API, which means that it can be used without any API token, membership, registration or payment.
 The API is also highly customizable, this is due to the fact that it supports a variety of filters that can be applied to get just the right jokes you need. This makes it the perfect API for this kinds of projects.
 
-When using the `meme` command, the bot will try to get a meme from the [Reddit-Meme-API](https://github.com/Rasesh2005/Reddit-Meme-API) by [Rasesh2005](https://github.com/Rasesh2005). This API scrapes a ramdom meme from Reddit and returns a list of information about the Reddit post.
+To use the `meme` command, you need to set up an API that returns Reddit posts in JSON format. 
+If you don't want to make it yourself, you can use [RedditAPI](https://github.com/AntonVanAssche/RedditAPI), which is an API I made especially for this bot. 
+Be aware, this API is intended to be hosted locally.
 
 ## Commands
 
