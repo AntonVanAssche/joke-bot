@@ -63,10 +63,7 @@ module.exports = {
                     .setColor("#FF0000")
                     .setTitle("Error:")
                     .setDescription(
-                        `${err.message}
-                    
-                    
-                    Use ${prefix}help for more info.`
+                        `${err.message}\nUse ${prefix}help for more info.`
                     )
                     .setFooter(
                         `${message.author.username}`,

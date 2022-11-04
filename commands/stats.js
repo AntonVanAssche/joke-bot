@@ -33,7 +33,9 @@ module.exports = {
                 `:pager: RAM`,
                 `${Math.trunc(
                     process.memoryUsage().heapUsed / 1024 / 1000
-                )} MB / ${Math.trunc(os.totalmem() / 1024 / 1000)} MB (${Math.round(
+                )} MB / ${Math.trunc(
+                    os.totalmem() / 1024 / 1000
+                )} MB (${Math.round(
                     (Math.round(process.memoryUsage().heapUsed / 1024 / 1024) /
                         Math.round(os.totalmem() / 1024 / 1024)) *
                         100

@@ -17,38 +17,41 @@ module.exports = {
                     "MemeEconomy",
                     "me_irl",
                     "ComedyCemetery",
-                    "terriblefacebookmemes"
+                    "terriblefacebookmemes",
                 ];
                 const randomsub = subs[Math.floor(Math.random() * subs.length)];
 
-            // Fetch a random post from the API.
-            let response = await axios.get(
-                `http://127.0.0.1:5000/${randomsub}`
-            );
-
-            let image = response.data.image_previews[
-                        Object.keys(response.data.image_previews)[
-                            Object.keys(response.data.image_previews).length - 1
-                        ]
-                    ]
-
-            while (
-                response.data.code == 400 ||
-                image == "No image preview found for this post" ||
-                image == null ||
-                image == undefined
-            ) {
                 // Fetch a random post from the API.
-                response = await axios.get(
+                let response = await axios.get(
                     `http://127.0.0.1:5000/${randomsub}`
                 );
 
-                image = response.data.image_previews[
-                            Object.keys(response.data.image_previews)[
-                                Object.keys(response.data.image_previews).length - 1
-                            ]
+                let image =
+                    response.data.image_previews[
+                        Object.keys(response.data.image_previews)[
+                            Object.keys(response.data.image_previews).length - 1
                         ]
-            }
+                    ];
+
+                while (
+                    response.data.code == 400 ||
+                    image == "No image preview found for this post" ||
+                    image == null ||
+                    image == undefined
+                ) {
+                    // Fetch a random post from the API.
+                    response = await axios.get(
+                        `http://127.0.0.1:5000/${randomsub}`
+                    );
+
+                    image =
+                        response.data.image_previews[
+                            Object.keys(response.data.image_previews)[
+                                Object.keys(response.data.image_previews)
+                                    .length - 1
+                            ]
+                        ];
+                }
 
                 // Check if the API successfully returned a joke.
                 if (response)
@@ -60,12 +63,15 @@ module.exports = {
                 const embed = new discord.MessageEmbed()
                     .setColor("RANDOM")
                     .setTitle(
-                        `${response.data.title}${response.data.nsfw ? " (NSFW)" : ""}`
+                        `${response.data.title}${
+                            response.data.nsfw ? " (NSFW)" : ""
+                        }`
                     )
                     .setImage(
                         response.data.image_previews[
                             Object.keys(response.data.image_previews)[
-                                Object.keys(response.data.image_previews).length - 1
+                                Object.keys(response.data.image_previews)
+                                    .length - 1
                             ]
                         ]
                     )
@@ -82,10 +88,7 @@ module.exports = {
                     .setColor("#FF0000")
                     .setTitle("Error:")
                     .setDescription(
-                        `${err.message}
-
-
-                    Use ${prefix}help for more info.`
+                        `${err.message}\nUse ${prefix}help for more info.`
                     )
                     .setFooter(
                         `${message.author.username}`,
