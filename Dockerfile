@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy all the scources to the container.
-COPY . .
+COPY src/ .
 
 # Define the command to run the app.
 CMD [ "node", "index.js" ]
