@@ -77,6 +77,7 @@ If you wish to change the prefix of the bot, you can do so in the `config.json` 
 Once you have successfully configured the `config.json` file, you can start the bot by running the following command in your terminal:
 
 ```bash
+$ cd src/
 $ node ./index.js
 ```
 
