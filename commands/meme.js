@@ -21,22 +21,13 @@ module.exports = {
                 ];
                 const randomsub = subs[Math.floor(Math.random() * subs.length)];
 
-                // Fetch a random post from the API.
-                let response = await axios.get(
-                    `http://127.0.0.1:5000/${randomsub}`
-                );
+                // Set `response` and `image` temperarily on `undefined`.
+                let response = undefined;
+                let image = undefined;
 
-                let image =
-                    response.data.image_previews[
-                        Object.keys(response.data.image_previews)[
-                            Object.keys(response.data.image_previews).length - 1
-                        ]
-                    ];
-
+                // While no image url has been set fetch another post.
                 while (
-                    response.data.code == 400 ||
-                    image == "No image preview found for this post" ||
-                    image == null ||
+                    response == undefined ||
                     image == undefined
                 ) {
                     // Fetch a random post from the API.
@@ -44,13 +35,17 @@ module.exports = {
                         `http://127.0.0.1:5000/${randomsub}`
                     );
 
-                    image =
-                        response.data.image_previews[
-                            Object.keys(response.data.image_previews)[
-                                Object.keys(response.data.image_previews)
-                                    .length - 1
-                            ]
-                        ];
+                    if (response.data.code == 200)
+                        image =
+                            response.data.image_previews[
+                                Object.keys(response.data.image_previews)[
+                                    Object.keys(response.data.image_previews)
+                                        .length - 1
+                                ]
+                            ];
+                        if (image === "No image preview found for this post")
+                            image = undefined;
+                    else console.error(`${new Date()}: \x1b[31mFailed to fetch an image, retrying\x1b[0m...`);
                 }
 
                 // Check if the API successfully returned a joke.
