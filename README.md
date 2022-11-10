@@ -28,6 +28,8 @@
         </a>
 </div>
 
+<img src="assets/preview.gif" alt="preview" align="right" style="padding: 30px;">
+
 ## How it works
 
 The bot makes use of the [JokeAPI](https://jokeapi.dev/) to get the random jokes. This is a REST API, which means that it can be used without any API token, membership, registration or payment.
