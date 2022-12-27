@@ -1,3 +1,7 @@
+// When an error occurs, we want to reply to the message that triggered it.
+// Therefor we need the `discord-reply` package to reply to the message.
+require('discord-reply');
+
 const discord = require("discord.js");
 const axios = require("axios");
 
@@ -91,7 +95,10 @@ module.exports = {
                         `${message.author.username}`,
                         message.author.displayAvatarURL()
                     );
-                message.reply(embed);
+
+                // Send a reply to the message that triggered the error.
+                // The reply will mention so he's more likely to see it.
+                message.lineReply(embed);
             }
         };
 
