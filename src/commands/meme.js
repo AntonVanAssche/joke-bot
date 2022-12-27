@@ -7,7 +7,7 @@ module.exports = {
     name: "meme",
     description: "Get a random meme from Reddit!",
     run: async (client, message, args) => {
-        const FetchMeme = async (category) => {
+        const FetchMeme = async () => {
             try {
                 // Select a random subreddit from the array.
                 var subs = [
@@ -25,11 +25,23 @@ module.exports = {
                 let response = undefined;
                 let image = undefined;
 
+                // Set attempts to 0.
+                // We will use this to make sure we don't spam the API with requests.
+                let attempts = 0;
+
                 // While no image url has been set fetch another post.
-                while (
-                    response == undefined ||
-                    image == undefined
-                ) {
+                // This is needed for small subreddits, since these return `NoneType` errors for some reason.
+                while (response == undefined || image == undefined) {
+                    // Allow 3 API requests before giving up.
+                    if (attempts == 3) {
+                        // Throw an error if the maximum amount of attempts has been reached.
+                        // This will be caught by the `catch` block.
+                        // The catch block will send a message to the channel notifying the user.
+                        throw new Error(`Failed to fetch a meme, maximum attempts reached. (${attempts}/3)`);
+                    } else {
+                        attempts++;
+                    }
+
                     // Fetch a random post from the API.
                     response = await axios.get(
                         `http://127.0.0.1:5000/${randomsub}`
