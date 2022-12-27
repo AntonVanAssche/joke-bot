@@ -57,7 +57,11 @@ module.exports = {
                             ];
                         if (image === "No image preview found for this post")
                             image = undefined;
-                    else console.error(`${new Date()}: \x1b[31mFailed to fetch an image, retrying\x1b[0m...`);
+                    else {
+                        console.error(
+                            `${new Date()}: \x1b[31mFailed to fetch an image, retrying\x1b[0m... (attempt: ${attempts}/3)`
+                        );
+                    }
                 }
 
                 // Check if the API successfully returned a joke.
