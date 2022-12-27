@@ -22,7 +22,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on("ready", () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`${new Date()}: \x1b[32mLogged in as ${client.user.tag}!\x1b[0m`);
     client.user.setActivity("@Joke-bot");
 });
 
