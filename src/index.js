@@ -70,6 +70,10 @@ client.on("message", async (message) => {
     } catch (e) {
         console.error(e);
         message.reply(`Error: ${e}`);
+    } finally {
+        console.log(
+            `${new Date()}: \x1b[32m${message.author.tag} ran ${command} with args ${args}\x1b[0m`
+        );
     }
 });
 

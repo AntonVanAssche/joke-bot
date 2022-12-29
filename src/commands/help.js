@@ -10,7 +10,7 @@ module.exports = {
             .setDescription(`Prefix : ${prefix}`)
             .addField(
                 `List of commands :`,
-                `help: Show this help message.\nping: Check the bot's ping.\nstats: Check the bot's stats.\njoke: Get a random joke.\ncategory: Get a random joke from a specific category.\nmeme: Get a random meme from Reddit.\n`
+                "`help`: Show this help message.\n`ping`: Check the bot's ping.\n`stats`: Check the bot's stats.\n`joke`: Get a random joke.\n`category`: Get a random joke from a specific category.\n`meme`: Get a random meme from Reddit.\n"
             )
             .addField(
                 `List of categories :`,

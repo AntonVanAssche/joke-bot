@@ -1,6 +1,6 @@
 // When an error occurs, we want to reply to the message that triggered it.
 // Therefor we need the `discord-reply` package to reply to the message.
-require('discord-reply');
+require("discord-reply");
 
 const discord = require("discord.js");
 const axios = require("axios");
@@ -41,7 +41,9 @@ module.exports = {
                         // Throw an error if the maximum amount of attempts has been reached.
                         // This will be caught by the `catch` block.
                         // The catch block will send a message to the channel notifying the user.
-                        throw new Error(`Failed to fetch an image, maximum attempts reached. (attempts: ${attempts}/3)`);
+                        throw new Error(
+                            `Failed to fetch a meme, maximum attempts reached. (attempts: ${attempts}/3)`
+                        );
                     } else {
                         attempts++;
                     }
@@ -51,7 +53,7 @@ module.exports = {
                         `http://127.0.0.1:5000/${randomsub}`
                     );
 
-                    if (response.data.code == 200)
+                    if (response.data.code == 200) {
                         image =
                             response.data.image_previews[
                                 Object.keys(response.data.image_previews)[
@@ -61,9 +63,9 @@ module.exports = {
                             ];
                         if (image === "No image preview found for this post")
                             image = undefined;
-                    else {
+                    } else {
                         console.error(
-                            `${new Date()}: \x1b[31mFailed to fetch an image, retrying\x1b[0m... (attempt: ${attempts}/3)`
+                            `${new Date()}: \x1b[31mFailed to fetch a meme, retrying\x1b[0m... (attempt: ${attempts}/3)`
                         );
                     }
                 }
@@ -96,7 +98,11 @@ module.exports = {
                     .setFooter(`Meme provided by r/${response.data.subreddit}`);
                 message.channel.send(embed);
             } catch (err) {
-                console.error(`${new Date()}: \x1b[31m${err.message}\x1b[0m`);
+                console.error(
+                    `${new Date()}: \x1b[31m'${prefix}meme' triggered an error: ${
+                        err.message
+                    }\x1b[0m`
+                );
 
                 // Respond with an error message.
                 const embed = new discord.MessageEmbed()

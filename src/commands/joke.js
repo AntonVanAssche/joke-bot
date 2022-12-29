@@ -60,7 +60,7 @@ module.exports = {
                     message.channel.send(embed);
                 }
             } catch (err) {
-                console.error(`${new Date()}: \x1b[31m${err.message}\x1b[0m`);
+                console.error(`${new Date()}: \x1b[31m'${prefix}joke' triggered an error: ${err.message}\x1b[0m`);
 
                 // Respond with an error message.
                 const embed = new discord.MessageEmbed()
