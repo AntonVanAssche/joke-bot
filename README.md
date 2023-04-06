@@ -60,6 +60,9 @@ Underneath you will find a list of commands that the bot can use.
 -   `!insult`: Get a random insult.
     -   You can also mention a user to insult them.
     -   Example: `!insult @bob`
+-   `!pp-size`: Let everyone kow how big your pp is.
+    -   You can also mention a user to show their pp size.
+    -   Example: `!pp-size @bob`
 -   `!meme`: Get a random meme from Reddit.
 
 Do you have a recommendation for a new command? Feel free to [submit them here](https://github.com/AntonVanAssche/joke-bot/issues/new).
