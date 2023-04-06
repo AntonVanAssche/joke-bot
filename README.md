@@ -3,7 +3,7 @@
         Joke-bot
     </h1>
     <p align="center">
-    Simple Discord bot to tell random jokes.
+        Simple Discord bot to tell random jokes.
         <br/>
         <strong>·</strong>
         <a href="https://github.com/AntonVanAssche/joke-bot/issues">Report Bug</a>
@@ -26,6 +26,7 @@
         <a href="https://github.com/AntonVanAssche/joke-bot/blob/master/LICENSE.md">
             <img src="https://img.shields.io/github/license/AntonVanAssche/joke-bot.svg?style=for-the-badge">
         </a>
+    </p>
 </div>
 
 <img src="assets/preview.gif" alt="preview" align="right" style="padding: 30px;">
@@ -61,24 +62,22 @@ Underneath you will find a list of commands that the bot can use.
     -   Example: `!insult @bob`
 -   `!meme`: Get a random meme from Reddit.
 
-Do you have a recommendation for a new command? Feel free to [submit it here](https://github.com/AntonVanAssche/joke-bot/issues/new).
+Do you have a recommendation for a new command? Feel free to [submit them here](https://github.com/AntonVanAssche/joke-bot/issues/new).
 
 ## Installation
 
-There are two ways to use the bot, either by running t directly on your machine or by running it within a Docker container.
+There are two ways to use the bot, either by running it directly on your machine or by running it within a Docker container.
+Regardless of the method you choose, you'll need to follow these initial steps:
 
-### Running the bot directly
-
-Firstly we will need to clone the repository. You can do this by running the following command in your terminal:
+1.  Clone the repository by running the following command in your terminal:
 
 ```console
 $ git clone https://github.com/AntonVanAssche/joke-bot.git
 $ cd joke-bot
 ```
 
-Once you have successfully cloned the project, you'll have to update the `config.json` file with your bot token.
-You can find the token in the [Bot Settings](https://discordapp.com/developers/applications/me) of your bot under the `Bot` tab.
-If you wish to change the prefix of the bot, you can do so in the `config.json` file. This is by default `!`.
+2.  Update the `config.json` file, located within the source directory (`src/`), with your bot token. You can find the token in the Bot Settings of your bot under the Bot tab.
+    If you wish to change the prefix of the bot, you can do so in the config.json file. This is by default !.
 
 ```json
 {
@@ -87,56 +86,35 @@ If you wish to change the prefix of the bot, you can do so in the `config.json` 
 }
 ```
 
-Since the `pickup-lines-api` requires an API key, you will have to create a `.env` file in the root directory of the project. This file will contain the API key.
-You can get the API key by signing up on [RapidAPI](https://rapidapi.com/).
+3.  Since the `pickup-lines-api` requires an API key, you will have to create a `.env` file in the root directory of the project.
+    This file will contain the API key. You can get the API key by signing up on [RapidAPI](https://rapidapi.com/).
 
 ```console
-$ echo "RAPID_API_TOKEN=<YOUR-API-TOKEN>" > ./src/.env
+$ echo "RAPID_API_TOKEN='<YOUR-API-TOKEN>'" > ./src/.env
 ```
 
-Once you have successfully configured the `config.json` file and the `.env` file, you can start the bot by running the following command in your terminal:
+### Running the bot directly
+
+If you choose to run the bot directly, follow these additional steps:
+
+1.  Install the dependencies by running the following command in your terminal:
 
 ```console
-$ cd src/                    # Go to the source directory.
-$ npm install                # Install the dependencies.
-$ node ./index.js            # Actually run the bot.
+$ npm install
+```
+
+2.  Start the bot by running the following command in your terminal:
+
+```console
+$ cd src/
+$ node ./index.js
 ```
 
 ### Running the bot within a Docker container
 
-Firstly we will need to clone the repository. You can do this by running the following command in your terminal:
+If you choose to run the bot within a Docker container, follow these additional steps:
 
-```console
-$ git clone https://www.github.com/AntonVanAssche/joke-bot.git
-$ cd joke-bot
-```
-
-Just like when running the bot directly, you'll have to update the `config.json` file with your bot token.
-You can find the token in the [Bot Settings](https://discordapp.com/developers/applications/me) of your bot under the `Bot` tab.
-If you wish to change the prefix of the bot, you can do so in the `config.json` file. This is by default `!`.
-
-```json
-{
-    "prefix": "---YOUR-BOT-PREFIX---",
-    "token": "---PLACE-YOUR-TOKEN-HERE---"
-}
-```
-
-Since the `pickup-lines-api` requires an API key, you will have to create a `.env` file in the root directory of the project. This file will contain the API key.
-You can get the API key by signing up on [RapidAPI](https://rapidapi.com/).
-
-```console
-$ echo "RAPID_API_TOKEN=<YOUR-API-TOKEN>" > ./src/.env
-```
-
-Once you have successfully configured the `config.json` file and the `.env` file, you can start the bot by running the following command in your terminal:
-
-```console
-$ docker build -t joke-bot .
-```
-
-This process is rather quick, but it will take a few minutes depending on your internet connection.
-When it comes to the actual running of the bot, you have two options. Either you run the bot in the foreground or in the background (deamon mode).
+1.  Build the Docker image by running the following command in your terminal:
 
 ```console
 $ docker run joke-bot        # Run the bot in the foreground.
@@ -144,7 +122,7 @@ $ docker run -d joke-bot     # Run the bot in the background.
 ```
 
 That's it! You can now use the bot by sending a message to the bot with the `!joke` command.
-If you encountered any issues while installing the bot, feel free to [report them here](https://github.com/AntonVanAssche/joke-bot/issues/new).
+If you encountered any issues while installing the bot, feel free to [report them](https://github.com/AntonVanAssche/joke-bot/issues/new).
 
 ## Contributing
 
