@@ -48,22 +48,24 @@ The last API used is the [Evil Insult Generator](https://evilinsult.com/api/). T
 
 ## Commands
 
-Underneath you will find a list of commands that the bot can use.
+Underneath you will find a list of commands that the bot can perform.
 
--   `!help`: Shows this help message.
--   `!ping`: Pong!
--   `!stats`: Shows the bot's stats.
--   `!joke`: Get a random joke.
--   `!category <category>`: Get a random joke from a specific category.
-    -   categories: `programming`, `misc`, `dark`, `pun`, `spooky`, `christmas`
--   `!pickup-line`: Get a random pickup line.
--   `!insult`: Get a random insult.
-    -   You can also mention a user to insult them.
-    -   Example: `!insult @bob`
--   `!pp-size`: Let everyone kow how big your pp is.
-    -   You can also mention a user to show their pp size.
-    -   Example: `!pp-size @bob`
--   `!meme`: Get a random meme from Reddit.
+| Command       | Description                                                                           | Usage                                                                                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `help`        | Shows a help message                                                                  | `!help`                                                                                                                                                                                                                      |
+| `ping`        | Show the bot latency                                                                  | `!ping`                                                                                                                                                                                                                      |
+| `stats`       | Show the bot's statistics                                                             | `!stats`                                                                                                                                                                                                                     |
+| `joke`        | Shows a random joke                                                                   | `!joke`                                                                                                                                                                                                                      |
+| `category`    | Shows a random joke from a specific category                                          | `!category <category>`<br> Categories:<br><ul><li><code>programming</code></li><li><code>misc</code></li><li><code>dark</code></li><li><code>pun</code></li><li><code>spooky</code></li><li><code>christmas</code></li></ul> |
+| `pickup-line` | Shows a random pickup line                                                            | `!pickup-line`                                                                                                                                                                                                               |
+| `insult`      | Shows a random insult, or insults a mentioned user                                    | `!insult`<br> `!insult @username`                                                                                                                                                                                            |
+| `pp-size`     | Shows the size of a mentioned user's "pp" (or yours if no user is mentioned)          | `!pp-size`<br> `!pp-size @user`                                                                                                                                                                                              |
+| `how-gay`     | Shows the level of gayness of a mentioned user (or yours if no user is mentioned)     | `!how-gay`<br> `!how-gay @usern`                                                                                                                                                                                             |
+| `lovemeter`   | Shows the love level between two mentioned users, or between you and a mentioned user | `!lovemeter @user1 @user2`<br> `!lovemeter @user`                                                                                                                                                                            |
+| `8ball`       | Ask the magic 8-ball a question                                                       | `!8ball <question>`                                                                                                                                                                                                          |
+| `meme`        | Shows a random meme from Reddit                                                       | `!meme`                                                                                                                                                                                                                      |
+
+**Note**: The default prefix is a `!`, this can be changed within the `config.json` file.
 
 Do you have a recommendation for a new command? Feel free to [submit them here](https://github.com/AntonVanAssche/joke-bot/issues/new).
 
