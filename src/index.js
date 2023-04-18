@@ -57,6 +57,19 @@ client.on("message", async (message) => {
         cmd.run(client, message, [target]);
     }
 
+    // If the message contains 'good bot', or a variation of it, reply with a compliment.
+    // This compliments the user, using the 'compliment' command.
+    if (message.content.toLowerCase().includes("good bot")) {
+        console.log(
+            `${new Date()}: \x1b[32m${
+                message.author.tag
+            } triggered the compliment command with the 'good bot' message.\x1b[0m`
+        );
+        const cmd = client.commands.get("compliment");
+        const target = message.author;
+        cmd.run(client, message, [target]);
+    }
+
     const prefix = config.prefix;
 
     // Ignore messages from other bots or that don't start with the prefix.
