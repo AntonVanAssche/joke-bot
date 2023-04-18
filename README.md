@@ -33,7 +33,7 @@
 
 ## How it works
 
-Currently the bot uses four different APIs to get the jokes, memes and pickup lines.
+Currently the bot uses five different APIs to get the jokes, memes and pickup lines.
 One of which is the [JokeAPI](https://jokeapi.dev/) used to get the random jokes.
 This API is a highly customizable API, open source and free to use for everyone.
 It allows you to fetch random jokes from a variety of categories, such as `programming`, `misc`, `dark`, `pun`, `spooky` and `christmas`, making it the perfect API for this bot.
@@ -44,7 +44,9 @@ This is a basic API that I made myself, you can find it on [GitHub](https://gith
 The third API used is the [pickup-lines-api](https://rapidapi.com/sfehqlfsau/api/pickup-lines-api/). This is a free API that can be used to get random pickup lines.
 The only downside is that it requires an API key, which you can get for free by signing up on [RapidAPI](https://rapidapi.com/).
 
-The last API used is the [Evil Insult Generator](https://evilinsult.com/api/). This API is used by the `!insult` command to get a random insult.
+The fourth API used is the [Evil Insult Generator](https://evilinsult.com/api/). This API is used by the `!insult` command to get a random insult.
+
+The last API used is the [complimentr](https://complimentr.com/api). This API is used by the `!compliment` command to get a random insult.
 
 ## Commands
 
@@ -59,6 +61,7 @@ Underneath you will find a list of commands that the bot can perform.
 | `category`    | Shows a random joke from a specific category                                          | `!category <category>`<br> Categories:<br><ul><li><code>programming</code></li><li><code>misc</code></li><li><code>dark</code></li><li><code>pun</code></li><li><code>spooky</code></li><li><code>christmas</code></li></ul> |
 | `pickup-line` | Shows a random pickup line                                                            | `!pickup-line`                                                                                                                                                                                                               |
 | `insult`      | Shows a random insult, or insults a mentioned user                                    | `!insult`<br> `!insult @username`                                                                                                                                                                                            |
+| `compliment`      | Shows a random compliment, or compliments a mentioned user                                    | `!compliment`<br> `!compliment @username`                                                                                                                                                                                            |
 | `pp-size`     | Shows the size of a mentioned user's "pp" (or yours if no user is mentioned)          | `!pp-size`<br> `!pp-size @user`                                                                                                                                                                                              |
 | `how-gay`     | Shows the level of gayness of a mentioned user (or yours if no user is mentioned)     | `!how-gay`<br> `!how-gay @usern`                                                                                                                                                                                             |
 | `lovemeter`   | Shows the love level between two mentioned users, or between you and a mentioned user | `!lovemeter @user1 @user2`<br> `!lovemeter @user`                                                                                                                                                                            |

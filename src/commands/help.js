@@ -17,6 +17,7 @@ module.exports = {
                     "`category`: Get a random joke from a specific category.\n" +
                     "`pickup-line`: Get a random pickup line.\n" +
                     "`insult`: Get insulted!\n" +
+                    "`compliment`: Get a compliment!\n" +
                     "`pp-size`: Let everyone kow how big your pp is.\n" +
                     "`how-gay`: Let everyone know how _gay_ you are.\n" +
                     "`lovemeter`: Let everyone know how much you love someone.\n" +
