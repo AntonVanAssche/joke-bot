@@ -3,9 +3,9 @@ const client = new discord.Client();
 const fs = require("fs");
 const config = require("./config.json");
 
-client.config = require("./config.json");   // Config file.
+client.config = require("./config.json"); // Config file.
 client.commands = new discord.Collection(); // Collection of commands.
-client.aliases = new discord.Collection();  // Collection of aliases.
+client.aliases = new discord.Collection(); // Collection of aliases.
 
 // Read the commands directory.
 fs.readdir("./commands/", (err, files) => {
@@ -44,6 +44,19 @@ client.on("ready", () => {
 
 // When the bot receives a message.
 client.on("message", async (message) => {
+    // If the message contains 'bad bot', or a variation of it, reply with an insult.
+    // This insults the user, using the 'insult' command.
+    if (message.content.toLowerCase().includes("bad bot")) {
+        console.log(
+            `${new Date()}: \x1b[32m${
+                message.author.tag
+            } triggered the insult command with the 'bad bot' message.\x1b[0m`
+        );
+        const cmd = client.commands.get("insult");
+        const target = message.author;
+        cmd.run(client, message, [target]);
+    }
+
     const prefix = config.prefix;
 
     // Ignore messages from other bots or that don't start with the prefix.
@@ -72,7 +85,9 @@ client.on("message", async (message) => {
         message.reply(`Error: ${e}`);
     } finally {
         console.log(
-            `${new Date()}: \x1b[32m${message.author.tag} ran ${command} with args ${args}\x1b[0m`
+            `${new Date()}: \x1b[32m${
+                message.author.tag
+            } ran ${command} with args ${args}\x1b[0m`
         );
     }
 });

@@ -26,7 +26,7 @@ module.exports = {
                 // If a user is mentioned, we'll use that user's name in the
                 // insult. We will mention the user in the message, so he's
                 // the one who gets insulted. MHUAHA HA HA HA HA HA ;D
-                const target = message.mentions.users.first();
+                target = message.mentions.users.first() || args[0];
 
                 const embed = new discord.MessageEmbed()
                     .setColor("RANDOM")
